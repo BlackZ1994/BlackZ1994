@@ -42,8 +42,8 @@ type RestClient struct {
 // methed http请求类型 GET POST DELETE...
 // param 请求参数
 // header 自定义请求头
-func (client *RestClient) New(url string, methed string, param interface{}, header map[string]string) *RestClient {
-	return &RestClient{url: url, method: methed, param: param, header: header}
+func New(url string, method string, param interface{}, header map[string]string) *RestClient {
+	return &RestClient{url: url, method: method, param: param, header: header}
 }
 
 // Do 发送http请求返回响应
